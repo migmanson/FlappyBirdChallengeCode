@@ -12,19 +12,62 @@ ModelImporter:
   - first:
       74: -1381898409435882497
     second: Armature|Flap (1)
-  externalObjects:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: ce5f406970ec4e44bb97c84cfab79fcf, type: 2}
+      74: -98635486856181906
+    second: Armature|Flap (1) //// Armature
+  - first:
+      74: 1056736647682770747
+    second: Armature|Flap //// Armature
+  - first:
+      74: 3356947987950824702
+    second: Armature|Flap (1) //// Root
+  - first:
+      74: 4517234633876841155
+    second: Armature|Flap //// Root
+  - first:
+      74: 2522904309351906952
+    second: Armature|Flap (1) //// Wing.L
+  - first:
+      74: 7477161860933050209
+    second: Armature|Flap //// Wing.L
+  - first:
+      74: -5457774329129334116
+    second: Armature|Flap (1) //// Wing.R
+  - first:
+      74: -1893591351338006351
+    second: Armature|Flap //// Wing.R
+  - first:
+      74: 8092530448169494286
+    second: Armature|Flap (1) //// Armature
+  - first:
+      74: -6829353514187716898
+    second: Armature|Flap //// Armature
+  - first:
+      74: 888091524227670308
+    second: Armature|Flap (1) //// Root
+  - first:
+      74: 8658570963354555119
+    second: Armature|Flap //// Root
+  - first:
+      74: 4532849552990461305
+    second: Armature|Flap (1) //// Wing.L
+  - first:
+      74: 4189420153235034147
+    second: Armature|Flap //// Wing.L
+  - first:
+      74: 8157765461263689628
+    second: Armature|Flap (1) //// Wing.R
+  - first:
+      74: -5378209738173263026
+    second: Armature|Flap //// Wing.R
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
   animations:
-    legacyGenerateAnimations: 4
+    legacyGenerateAnimations: 3
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
@@ -37,7 +80,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importConstraints: 1
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -47,41 +90,12 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Flap (1)
-      takeName: Armature|Flap
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 19
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 1
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
       name: Armature|Flap
       takeName: Armature|Flap
       internalID: 0
       firstFrame: 0
       lastFrame: 19
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
@@ -113,7 +127,7 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
-    importBlendShapes: 1
+    importBlendShapes: 0
     importCameras: 1
     importLights: 1
     nodeNameCollisionStrategy: 1
@@ -128,7 +142,7 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
-    optimizeBones: 1
+    optimizeBones: 0
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -145,7 +159,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 0
+    blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1

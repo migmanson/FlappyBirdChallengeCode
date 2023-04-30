@@ -8,10 +8,8 @@ public class PlayerBehaviour : MonoBehaviour
     public Rigidbody rbPlayer;
     public bool jumpp = false;
     public int force; //mass = 0.75, force = 4
-    public GameManager gm;
-    
+    public GameManager gm;    
 
-    // Start is called before the first frame update
     void Start()
     {
         rbPlayer = gameObject.GetComponent<Rigidbody>();
@@ -19,10 +17,8 @@ public class PlayerBehaviour : MonoBehaviour
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         if (!gm.playingLevel)
         {
             DisableRBody();
@@ -38,24 +34,29 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    void EnableRBody()
+    public void EnableRBody()
     {
         rbPlayer.isKinematic = false;
         rbPlayer.detectCollisions = true;
     }
-    void DisableRBody()
+    public void DisableRBody()
     {
         rbPlayer.isKinematic = true;
         rbPlayer.detectCollisions = false;
     }
-
 
     void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Obstacle")
         {
             Debug.LogError(" LOSE ");
-            gm.playingLevel = false;
+            Death();
         }
+    }
+
+    void Death()
+    {
+        gm.playingLevel = false;
+        gm.Lose();
     }
 }

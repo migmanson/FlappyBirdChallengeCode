@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour
     {
         if (gm.playingLevel)
         {
-            transform.Translate(-Vector3.right * Time.deltaTime);
+            transform.Translate(-Vector3.right * Time.deltaTime * 5f);
         }
     }
 

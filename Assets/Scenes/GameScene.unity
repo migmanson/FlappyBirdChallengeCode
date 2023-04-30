@@ -1035,10 +1035,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas UI
       objectReference: {fileID: 0}
-    - target: {fileID: 4367765733397055969, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 4367765733397055970, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1143,14 +1139,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 619940837}
-    - target: {fileID: 4367765734699656218, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4367765735239254589, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
-      propertyPath: m_text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4367765735275381355, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

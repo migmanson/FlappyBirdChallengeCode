@@ -8,7 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     public Rigidbody rbPlayer;
     public bool jumpp = false;
     public int force; //mass = 0.75, force = 4
-    public GameManager gm;    
+    public GameManager gm;
 
     void Start()
     {
@@ -23,15 +23,24 @@ public class PlayerBehaviour : MonoBehaviour
         {
             DisableRBody();
         }
-        else { 
-            EnableRBody(); 
+        else
+        {
+            EnableRBody();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //Debug.LogError(" jumping ");
-            rbPlayer.AddForce(transform.up * force, ForceMode.Impulse);
-        }
+        #if UNITY_ANDROID
+                if (Input.touchCount>0 && Input.touches[0].phase == TouchPhase.Began)
+                {
+                    rbPlayer.AddForce(transform.up * force, ForceMode.Impulse);
+                }            
+        #else
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+                {
+                    //Debug.LogError(" jumping ");
+                    rbPlayer.AddForce(transform.up * force, ForceMode.Impulse);
+                }
+        #endif
+
     }
 
     public void EnableRBody()

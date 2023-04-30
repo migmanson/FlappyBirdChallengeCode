@@ -134,6 +134,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &258504082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4367765734272167250, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
+  m_PrefabInstance: {fileID: 4367765734080780480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &288235800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4367765733831883224, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
+  m_PrefabInstance: {fileID: 4367765734080780480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &589942546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -227,6 +249,7 @@ MonoBehaviour:
   uicontroller: {fileID: 619940837}
   player: {fileID: 1013088538}
   player_score: 0
+  player_highscore: 0
 --- !u!4 &619940836
 Transform:
   m_ObjectHideFlags: 0
@@ -255,9 +278,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playButton: {fileID: 27988306}
-  panel0110: {fileID: 0}
-  panel1120: {fileID: 0}
-  panel2125: {fileID: 0}
+  scoreOnScreen: {fileID: 1692892378}
+  highScoreOnScreen: {fileID: 1158486781}
+  highScoreOnPause: {fileID: 288235800}
+  scoreResult: {fileID: 258504082}
   panelMain: {fileID: 1289840346}
   panelPausa: {fileID: 1261186037}
   panelHUD: {fileID: 2000963967}
@@ -602,6 +626,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f9a690303c352d4d89f47c7516c3040, type: 3}
+--- !u!114 &1158486781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4367765735239254589, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
+  m_PrefabInstance: {fileID: 4367765734080780480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1261186037 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4367765735274853173, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
@@ -788,6 +823,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1692892378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4367765734699656218, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
+  m_PrefabInstance: {fileID: 4367765734080780480}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1740605268
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +1037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4367765733397055969, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 1
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4367765733397055970, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
       propertyPath: m_Pivot.x
@@ -1097,6 +1143,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 619940837}
+    - target: {fileID: 4367765734699656218, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367765735239254589, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4367765735275381355, guid: 63680a31a57f29843a87afb6f54b03c3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

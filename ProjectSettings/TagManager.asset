@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WorldEdge
   - Obstacle
+  - Scored
   layers:
   - Default
   - TransparentFX

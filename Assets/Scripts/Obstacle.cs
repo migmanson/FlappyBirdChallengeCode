@@ -5,10 +5,12 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public GameManager gm;
+    public UIController uicontroller;
 
     private void Start()
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        uicontroller = gm.GetComponentInParent<UIController>();
     }
     void Update()
     {
@@ -20,7 +22,14 @@ public class Obstacle : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "WorldEdge")
+
+        if (other.tag == "Player")
+        {           
+            gm.player_score++;
+            uicontroller.UpdateScore();
+            Debug.LogError("score>> " + gm.player_score);
+        }
+        else if (other.tag == "WorldEdge")
         {
             //Debug.LogError(" resetting " + other.transform.position + other.transform.localPosition);
             gameObject.transform.Translate(new Vector3(25, 0, 0));

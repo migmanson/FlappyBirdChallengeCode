@@ -6,9 +6,10 @@ public class UIController : MonoBehaviour
 {
     public static UIController Instance;
     public UnityEngine.UI.Button playButton;
-    public GameObject panel0110;
-    public GameObject panel1120;
-    public GameObject panel2125;
+    public TMPro.TextMeshProUGUI scoreOnScreen;
+    public TMPro.TextMeshProUGUI highScoreOnScreen;
+    public TMPro.TextMeshProUGUI highScoreOnPause;
+    public TMPro.TextMeshProUGUI scoreResult;
     public GameObject panelMain;
     public GameObject panelPausa;
     public GameObject panelHUD;
@@ -60,6 +61,7 @@ public class UIController : MonoBehaviour
         pauseButton.SetActive(true);
         pauseMsj.SetActive(true);
         textIntro.SetActive(true);
+        UpdateScore();
         yield return new WaitForSeconds(2);
         textIntro.SetActive(false);
         gameController.Paused = false;
@@ -71,6 +73,7 @@ public class UIController : MonoBehaviour
     {
         gameController.playingLevel = false;
         panelPausa.SetActive(true);
+        UpdateScore();
         pauseButton.SetActive(false);
         panelHUD.SetActive(false);
         pauseMsj.SetActive(false);
@@ -98,7 +101,8 @@ public class UIController : MonoBehaviour
         textIntro.SetActive(true);
         textIntro.GetComponent<TMPro.TextMeshProUGUI>().text = "GET READY...";
         yield return new WaitForSeconds(2);
-        textIntro.SetActive(false);        
+        textIntro.SetActive(false);
+        UpdateScore();
     }
 
     public void LoadGameMenu()
@@ -117,5 +121,13 @@ public class UIController : MonoBehaviour
         panelLose.SetActive(true);
         textIntro.SetActive(true);
         textIntro.GetComponent<TMPro.TextMeshProUGUI>().text = "YOU LOSE";
+    }
+
+    public void UpdateScore()
+    {
+        scoreOnScreen.text = "Score: " + gameController.player_score;
+        highScoreOnScreen.text = "High Score: " + gameController.player_highscore;
+        highScoreOnPause.text = "High Score: " + gameController.player_highscore;
+        scoreResult.text = "YOUR SCORE: " + gameController.player_score;
     }
 }

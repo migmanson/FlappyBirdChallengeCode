@@ -49,6 +49,7 @@ public class UIController : MonoBehaviour
 
     public void ContinueGame()
     {
+        StopAllCoroutines();
         StartCoroutine("ContinuePlaying");
     }
 
@@ -60,9 +61,15 @@ public class UIController : MonoBehaviour
         panelHUD.SetActive(true);
         pauseButton.SetActive(true);
         pauseMsj.SetActive(true);
-        textIntro.SetActive(true);
         UpdateScore();
-        yield return new WaitForSeconds(2);
+        textIntro.SetActive(true);
+        textIntro.GetComponent<TMPro.TextMeshProUGUI>().text = "GET READY...";
+        yield return new WaitForSeconds(1);
+        textIntro.GetComponent<TMPro.TextMeshProUGUI>().text = "2";
+        yield return new WaitForSeconds(1);
+        textIntro.GetComponent<TMPro.TextMeshProUGUI>().text = "1";
+        yield return new WaitForSeconds(1);
+        textIntro.GetComponent<TMPro.TextMeshProUGUI>().text = "";
         textIntro.SetActive(false);
         gameController.Paused = false;
         gameController.playingLevel = true;
@@ -102,6 +109,7 @@ public class UIController : MonoBehaviour
         textIntro.GetComponent<TMPro.TextMeshProUGUI>().text = "GET READY...";
         yield return new WaitForSeconds(2);
         textIntro.SetActive(false);
+        pauseButton.SetActive(true);
         UpdateScore();
     }
 

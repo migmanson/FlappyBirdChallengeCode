@@ -32,7 +32,7 @@ public class Obstacle : MonoBehaviour
         else if (other.tag == "WorldEdge")
         {
             //Debug.LogError(" resetting " + other.transform.position + other.transform.localPosition);
-            gameObject.transform.Translate(new Vector3(25, 0, 0));
+            gameObject.transform.Translate(new Vector3(30, 0, 0));
         }
     }
 
